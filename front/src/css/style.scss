@@ -1,0 +1,445 @@
+@import "~reset-css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap&subset=cyrillic");
+
+$mainFont: "Montserrat", sans-serif;
+$mainColor: #3c3c3c;
+$submainColor: #67c1ff;
+$transparentColor: #ecf7ff;
+$errorColor: #ff0000;
+$lightColor: #fff;
+$blocksPadding: 1.3em;
+$rowsPadding: 15px;
+$blocksMargin: 1.3em;
+$rowsMargin: 15px;
+
+* {
+  font-family: $mainFont;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: $mainFont;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $mainColor;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  padding: $blocksPadding 0;
+}
+h2, h3, h4, p {
+  margin: $blocksMargin 0;
+}
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: $rowsPadding;
+  box-sizing: border-box;
+}
+.container:nth-child(2) {
+  padding: $rowsPadding $rowsPadding 30px;
+  min-height: 400px;
+}
+a {
+  color: $mainColor;
+  text-decoration: underline;
+}
+button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px $blocksPadding;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $submainColor;
+  border-radius: 20px;
+  color: $submainColor;
+  transition: .1s ease-in-out;
+  cursor: pointer;
+  background: transparent;
+  text-transform: uppercase;
+}
+.btn-link{
+  color: $submainColor;
+  text-decoration: none;
+}
+.btn-block {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+button:hover{
+  background-color: $submainColor;
+  color: $lightColor;
+}
+button:hover .btn-link{
+  color: $lightColor;
+}
+button:hover:before {
+  left: 115%;
+  transition: .3s ease-in-out;
+}
+button:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+input, textarea, select {
+  font-size: 1.2em;
+  border: none;
+  width: 240px;
+  padding: 0 $blocksPadding;
+  background: $transparentColor;
+  line-height: 40px;
+  border-radius: 20px;
+}
+input:disabled {
+  background: transparent;
+  line-height: inherit;
+}
+input:focus, textarea:focus, select:focus{
+  border-width: 0;
+  outline: none;
+}
+.logo{
+  text-decoration: none;
+  font-family: cursive;
+}
+.error {
+  color: $errorColor;
+}
+@media screen and (max-width: 1300px){
+  .container {
+    width: 100%;
+    padding: $rowsPadding;
+  }
+}
+
+/*Header*/
+header{
+  box-sizing: border-box;
+  color: $lightColor;
+  background: $submainColor;
+}
+header .container{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.header-column{
+  width: 100%;
+}
+h4.header-column{
+  text-align: center;
+  font-size: 1.6em;
+}
+ul.header-column{
+  display: flex;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  text-transform: uppercase;
+}
+ul.header-column li{
+  padding-right: $blocksPadding;
+}
+ul.header-column li:hover{
+  text-decoration: underline;
+}
+div.header-column{
+  text-align: right;
+}
+.link{
+  color: $lightColor;
+  cursor: pointer;
+  text-decoration: none;
+}
+.link.active {
+  text-decoration: underline;
+}
+
+.user-menu {
+  position: relative;
+}
+.user-menu img {
+  width: 20px;
+}
+.login{
+  padding-right: 10px;
+}
+.account-menu {
+  position: absolute;
+  right: 0;
+  list-style-type: none;
+  background: $lightColor;
+  color: #595750;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  padding: 5px 10px;
+  line-height: 1.6em;
+}
+.account-menu li a{
+  text-decoration: none;
+}
+.account-menu li:hover {
+  text-decoration: underline;
+}
+
+/*Footer*/
+footer{
+  box-sizing: border-box;
+  color: $lightColor;
+  background: $submainColor;
+}
+footer .container{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.footer-column{
+  width: 100%;
+}
+ul.footer-column{
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  padding-right: $blocksPadding;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+ul.footer-column li{
+  padding: 10px 0;
+}
+ul.footer-column li:hover {
+  text-decoration: underline;
+}
+.footer-column.contacts{
+  text-align: right;
+}
+footer a {
+  color: $lightColor;
+  text-decoration: none;
+  font-weight: 600;
+}
+.contacts .icon {
+  width: 30px;
+  vertical-align: top;
+}
+
+/*Preloader*/
+.preloader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+.preloader {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(187, 226, 255, 0.4);
+  border-left: 1.1em solid #67c1fe;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Login*/
+.login-row {
+  padding-bottom: $rowsPadding;
+}
+
+/*Account*/
+.account-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-header span{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.account label {
+  display: block;
+  padding: 10px 0 0;
+}
+.account label input{
+  margin-left: 10px;
+}
+
+/*Article & ArticleList*/
+.article-item {
+  display: flex;
+  flex-flow: column;
+  padding: $rowsPadding 0;
+  border-bottom: 1px solid #cecece;
+  position: relative;
+}
+.article-header, .article-text {
+  display: flex;
+  flex-direction: row;
+}
+.article-header {
+  padding-bottom: $rowsPadding;
+}
+.article-user, .article-title{
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.article-user, .article-likes{
+  width: 20%;
+  text-align: center;
+}
+.article-title, .article-body{
+  width: 80%;
+  padding-left: 20px;
+}
+.article-item:last-child {
+  border: none;
+}
+.article-actions{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.article-add {
+  position: absolute;
+  top: $blocksPadding;
+  right: 0;
+  cursor: pointer;
+}
+
+/*Content*/
+.article-block h2, .users-block h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+.article-block {
+  display: flex;
+}
+.article-block-column {
+  width: 100%;
+}
+.article-block-column > div > div{
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  width: 90%;
+  margin: 0 auto $blocksMargin;
+}
+.users-block {
+  padding-top: $blocksPadding;
+}
+.users-block > div > div {
+  display: flex;
+}
+.users-block > div > div div {
+  text-align: center;
+  width: 100%;
+  border: 1px solid #cecece;
+  border-radius: 20em;
+  margin: $blocksMargin;
+  padding: $blocksPadding;
+}
+
+/*Contacts*/
+.icon {
+  width: 30px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+/*Popup*/
+.popup-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.popup-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(82, 81, 81, 0.47);
+}
+.popup-container {
+  position: relative;
+  z-index: 1;
+  margin: $blocksMargin auto;
+  background: $lightColor;
+  width: 50%;
+  text-align: center;
+}
+.popup-container textarea,
+.popup-container input{
+  width: 100%;
+  margin: 10px auto $blocksMargin;
+  display: block;
+  box-sizing: border-box;
+}
+.popup-container textarea{
+  line-height: 1.5;
+  min-height: 160px;
+}
+.popup-form{
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.popup-form label{
+  display: block;
+  text-align: left;
+}
+.popup-container button {
+  margin: 0 5px $blocksMargin;
+}
+.popup-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+}

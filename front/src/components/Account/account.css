@@ -1,0 +1,17 @@
+.account-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.account-header span {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.account label {
+    display: block;
+    padding: 10px 0 0;
+}
+.account label input {
+    margin-left: 10px;
+}

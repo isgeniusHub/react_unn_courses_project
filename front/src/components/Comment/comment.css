@@ -1,0 +1,45 @@
+.comments {
+    font-weight: 600;
+    text-transform: uppercase;
+    border-top: 1px solid #cecece;
+    padding: 1em 0;
+    border-bottom: 1px solid #cecece;
+}
+.comment-item {
+    padding: 1em 0 1em 3em;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #cecece;
+}
+.comment-author {
+    font-weight: 600;
+    min-width: 5em;
+}
+.comment-text {
+    position: relative;
+    padding-left: 1em;
+    width: 100%;
+}
+span.comment-delete {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+span.comment-delete img {
+    width: 20px;
+    cursor: pointer;
+}
+.comment-add {
+    text-align: right;
+    margin-top: 15px;
+}
+.comment-add-form {
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.comment-add-form textarea {
+    width: 100%;
+}
+

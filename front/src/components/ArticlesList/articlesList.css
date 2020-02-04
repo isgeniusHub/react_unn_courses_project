@@ -1,0 +1,55 @@
+.articles {
+    position: relative;
+}
+.article-item {
+    display: flex;
+    flex-flow: column;
+    padding: 15px 0;
+    border-bottom: 1px solid #cecece;
+    position: relative;
+}
+.article-header, .article-text {
+    display: flex;
+    flex-direction: row;
+}
+.article-header {
+    padding-bottom: 15px;
+}
+.article-user, .article-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.article-user, .article-likes {
+    width: 20%;
+    text-align: center;
+}
+.article-likes span{
+    cursor: pointer;
+}
+.article-title, .article-body {
+    width: 80%;
+    padding-left: 20px;
+}
+.article-body > div {
+    padding-bottom: 20px;
+}
+.article-item:last-child {
+    border: none;
+}
+.article-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.article-add {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    cursor: pointer;
+}
+span.article-change img,
+span.article-delete img{
+    width: 20px;
+}

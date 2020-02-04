@@ -1,0 +1,12 @@
+.users-info {
+    padding-top: 20px;
+    display: flex;
+}
+.users-info .user-info {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #cecece;
+    border-radius: 20em;
+    margin: 20px;
+    padding: 20px;
+}

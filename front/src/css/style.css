@@ -1,0 +1,134 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3c3c3c;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 0;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.container:nth-child(2) {
+    padding: 15px 15px 30px;
+    min-height: 400px;
+}
+a {
+    color: #3c3c3c;
+    text-decoration: underline;
+}
+button {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #67c1ff;
+    border-radius: 20px;
+    color: #67c1ff;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    background: transparent;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.btn-link {
+     color: #67c1ff;
+     text-decoration: none;
+}
+.btn-block {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+button:hover {
+    background-color: #67c1ff;
+    color: #fff;
+}
+button:hover .btn-link {
+    color: #fff;
+}
+button:hover:before {
+    left: 115%;
+    transition: .3s ease-in-out;
+}
+button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+label {
+    display: block;
+    text-align: left;
+    padding-bottom: 15px;
+    vertical-align: top;
+}
+input, textarea, select {
+    font-size: 1.2em;
+    border: none;
+    width: 240px;
+    padding: 0 20px;
+    background: #ecf7ff;
+    line-height: 40px;
+    border-radius: 20px;
+    vertical-align: top;
+}
+input:disabled,
+textarea:disabled {
+    background: transparent;
+    line-height: inherit;
+}
+input:focus, textarea:focus, select:focus {
+    border-width: 0;
+    outline: none;
+}
+input:-internal-autofill-selected,
+input:-internal-autofill-selected:disabled {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+.logo{
+    text-decoration: none;
+    font-family: cursive;
+}
+.error {
+    color: #ff0000;
+}
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}

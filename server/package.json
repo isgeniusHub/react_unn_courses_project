@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "first server",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node --experimental-modules src/server.js",
+    "mongo_old": "docker run -d -p 27017:27017/tcp mongo:4.2",
+    "mongo": "docker run -p 27017:27017/tcp --volume /usr/mongoDB:/data/db mongo:4.2",
+    "ps": "docker ps",
+    "build": "docker build -t isgenius/unn-node-app:0.0.1 ..",
+    "loginDocker": "docker login",
+    "docker": "docker run isgenius/unn-node-app:0.0.1",
+    "push": "docker push isgenius/unn-node-app:0.0.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^8.0.1",
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/inert": "^5.2.2",
+    "@hapi/joi": "^16.1.8",
+    "dotenv": "^8.2.0",
+    "hapi": "^18.1.0",
+    "hapi-auth-bearer-token": "^6.1.2",
+    "mongoose": "^5.7.14",
+    "path": "^0.12.7",
+    "uuid": "^3.3.3"
+  }
+}

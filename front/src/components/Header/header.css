@@ -1,0 +1,75 @@
+header {
+    box-sizing: border-box;
+    color: #fff;
+    background: #67c1ff;
+}
+header .container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.header-column {
+    width: 100%;
+}
+h4.header-column {
+    text-align: center;
+    font-size: 1.6em;
+}
+ul.header-column {
+    display: flex;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    text-transform: uppercase;
+}
+ul.header-column li {
+    padding-right: 20px;
+}
+ul.header-column li:hover {
+    text-decoration: underline;
+}
+div.header-column {
+    text-align: right;
+}
+.link {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link.active {
+    text-decoration: underline;
+}
+
+.user-menu {
+    position: relative;
+}
+.user-menu img {
+    width: 20px;
+}
+.login {
+    padding-right: 10px;
+}
+.account-menu {
+    position: absolute;
+    right: 0;
+    list-style-type: none;
+    background: #fff;
+    color: #595750;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    padding: 5px 10px;
+    line-height: 1.6em;
+}
+.account-menu li a {
+    text-decoration: none;
+}
+.account-menu li:hover {
+    text-decoration: underline;
+}

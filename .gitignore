@@ -1,0 +1,4 @@
+/frontnode_modules/
+/front/dist/
+/server/node_modules/
+.env
