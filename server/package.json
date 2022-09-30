@@ -24,7 +24,7 @@
     "@hapi/joi": "^16.1.8",
     "dotenv": "^8.2.0",
     "hapi": "^18.1.0",
-    "hapi-auth-bearer-token": "^6.1.2",
+    "hapi-auth-bearer-token": "^6.1.6",
     "mongoose": "^5.7.14",
     "path": "^0.12.7",
     "uuid": "^3.3.3"
